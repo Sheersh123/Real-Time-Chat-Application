@@ -22,9 +22,9 @@ services:
       dockerfile: Dockerfile
     container_name: chat-backend
     ports:
-      - "3001:3001"
+      - "3100:3100"
     environment:
-      - PORT=3001
+      - PORT=3100
       - REDIS_URL=redis://redis:6379
       - CORS_ORIGIN=*
       - SERVER_ID=backend-1
