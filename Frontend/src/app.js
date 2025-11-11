@@ -3,7 +3,7 @@ import io from 'socket.io-client';
 import './App.css';
 import { FaPaperPlane, FaUsers, FaCircle } from 'react-icons/fa';
 
-const SOCKET_URL = process.env.REACT_APP_SOCKET_URL || 'http://localhost:3001';
+const SOCKET_URL = process.env.REACT_APP_SOCKET_URL || 'http://localhost:3100';
 
 function App() {
   const [socket, setSocket] = useState(null);
@@ -166,10 +166,10 @@ function App() {
 
   if (!isJoined) {
     return (
-      <div className="app">
+      <div className="App">
         <div className="join-container">
           <div className="join-card">
-            <h1 className="app-title">
+            <h1 className="App-title">
               <FaCircle className="status-icon" /> Scalable Chat
             </h1>
             <p className="app-subtitle">Real-time messaging with Redis & Socket.io</p>
@@ -222,7 +222,7 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <div className="App">
       <div className="chat-container">
         <div className="chat-header">
           <div className="header-left">
